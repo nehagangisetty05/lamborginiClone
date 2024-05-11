@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamborghini</title>
+
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- navigation section -->
+    <nav>
+        <div id="logo">
+            <img src="./asset/logo.png" alt="">
+        </div>
+        <ul id="left-list">
+            <li>
+                <a href="#" id="menu-a-tag">Models <div class="underline"></div></a>
+                <ul class="sublist">
+                    <li><a href="#">Revuelto</a></li>
+                    <li><a href="#">Huracán</a></li>
+                    <li><a href="#">urus</a></li>
+                    <li><a href="#">pre-owned</a></li>
+                    <li><a href="#">limited series</a></li>
+                    <li><a href="#">concept</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="menu-a-tag">Beyond <div class="underline"></div></a></li>
+            <li>
+                <a href="#" id="menu-a-tag">ownership <div class="underline"></div></a>
+                <ul class="sublist sublist2">
+                    <li><a href="#">connectivity</a></li>
+                    <li><a href="#">customer app</a></li>
+                    <li><a href="#">mobility program</a></li>
+                    <li><a href="#">classics</a></li>
+                    <li><a href="#">service</a></li>
+                    <li><a href="#">recall campaign</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="menu-a-tag">motorsport <div class="underline"></div></a>
+                <ul class="sublist sublist3">
+                    <li><a href="#">hypercar/gtp</a></li>
+                    <li><a href="#">super trofeo</a></li>
+                    <li><a href="#">gt3</a></li>
+                    <li><a href="#">motorsport models</a></li>
+                    <li><a href="#">drivers</a></li>
+                    <li><a href="#">motersport news</a></li>
+                    <li><a href="#">experience</a></li>
+                    <li><a href="#">esports</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="right-list">
+            <li><a href="#" id="menu-a-tag">dealership <div class="underline"></div></a></li>
+            <li><a href="#" id="menu-a-tag">mueum <div class="underline"></div></a></li>
+            <li><a href="#" id="menu-a-tag">store <div class="underline"></div></a></li>
+        </ul>
+        <div id="right-symbol">
+            <i class="fa-regular fa-message" id="message" onclick="msgpopup()"></i>
+            <i class="fa-solid fa-magnifying-glass" onclick="searchpopup()"></i>
+            <li>
+                <div id = "three-lines">
+                    <div class="horizontal-bars" id="bar1"></div>
+                    <div class="horizontal-bars" id="bar2"></div>
+                    <div class="horizontal-bars" id="bar3"></div>
+                </div>
+                <div class="mainsubmenu">
+                    <div class="upper">
+                        <div>
+                            <ul class="">
+                                <li>CUSTOMIZATION</li>
+                                <li>accessories</li>
+                                <li>financial services</li>
+                                <li>warranty extension</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="">
+                                <li>design</li>
+                                <li>innovation & excellence</li>
+                                <li>sustainability</li>
+                                <li>history</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="">
+                                <li>driving programs</li>
+                                <li>lounge</li>
+                                <li>club</li>
+                                <li>news</li>
+                                <li>podcast</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menuline"></div>
+                    <div class="lower">
+                        <div>
+                            <h5>languages</h5>
+                            <div>
+                                <p>english</p>
+                                <p>italian</p>
+                                <p>french</p>
+                                <p>spanish</p>
+                                <p>german</p>
+                                <p>chinese</p>
+                                <p>japanese</p>
+                                <p>russian</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>social</h5>
+                            <div>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-threads"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-tiktok"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-weibo"></i>
+                                <i class="fa-brands fa-weixin"></i>
+                                <i class="fa-brands fa-discord"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>settings</h5>
+                            <div class="contetnicons">
+                                <h5>textsize </h5>
+                                <i class="fa-solid fa-minus"></i> 
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="contetnicons">
+                                <h5>transisions</h5>
+                                <i class="fa-solid fa-bell"></i>
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </nav>
+
+    <!-- askme section -->
+    <div class="msg">
+        <div class="head">
+            <h1>Ask me!</h1>
+            <i class="fa-solid fa-x" onclick="msgpopdown()"></i>
+        </div>
+        <div class="line"></div>
+        <div class="scroll">
+            <p>I'm Lamborghini's first Artificial Intelligence, how can I help you?</p>
+            <p>You can choose one of the suggestions or ask me a question</p>
+            <div class="boxs">
+                <div class="box">models</div>
+                <div class="box">dealers</div>
+                <div class="box">museum and production line</div>
+                <div class="box">ad personam</div>
+                <div class="box">work with us</div>
+                <div class="box">company and history</div>
+                <div class="box">masterpieces</div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="msgbox">
+            <input type="text" placeholder="Hey, ask me something...">
+            <button>Send</button>
+        </div>
+    </div>
+
+    <!-- search section -->
+    <div class="searchContainer">
+        <div class="crossbar">
+            <p>Close Search</p>
+            <i class="fa-solid fa-x" onclick="searchout()"></i>
+        </div>
+        <div class="searchtitle">
+            <h2>Lomborgini</h2>
+            <h1>Search in the</h1>
+            <h1>Website</h1>
+        </div>
+        <div class="searchinput">
+            <input type="text" placeholder="Search on Lamborghini.com">
+            <button>SEARCH</button>
+        </div>
+    </div>
+
+    <!-- header section -->
+    <div id="car-wallpaper">
+        <div id="side-menu">
+            Home /<span id="models"> models</span>
+        </div>
+        <div id="heading">
+            <span id="line1">lamborghini</span>
+            <span id="line2">models</span>
+        </div>
+        <div id="overview">
+            <div id="down-symbol">
+                <div id = "hexagon1">
+                    <div id="hexagon2">
+                        <div id="arrow"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overview-text">
+                <span id="overview-text-1">models overview</span>
+                <span id="overview-text-2">all lamborghini models</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 2 -->
+    <div id="section2">
+        <div id="sec2-left-text">
+            <h1 id="heading1">revuelto</h1>
+            <div id="text-line">
+                <div id="underline1"></div>
+                <div id="underline2"></div>
+                <div id="underline3"></div>
+            </div>
+            <p id="para1">The Revuelto is the beginning of a new era for Lamborghini, who has harnessed the power of hybridization technology to create the first HPEV (High Performance Electrified Vehicle). Responding to the need for sustainability and powerful performance, the Lamborghini Revuelto rewrites all paradigms and represents a technical masterpiece beyond anyone’s imagination. The iconic V12 engine finds a new life in this futuristic automotive masterwork that delivers unparalleled performance and driving emotions.</p>
+            <br><br>
+            <div id="down-text">
+                <h3 id="sub-heading">revuelto</h3>
+                <br>
+                <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+            </div>
+        </div>
+        <div id="polygon-images-right">
+            <div id="polygon-img1"></div>
+            <div id="polygon-img2"></div>
+        </div>
+    </div>
+
+    <!-- section 3 -->
+    <div id="section3">
+        <div id="sec3-left-polygon1"></div>
+        <div id="sec3-left-polygon2"></div>
+
+        <div id="sec3-right-text">
+            <div id="sec3-para">
+                <h1 id="heading1">hyracan</h1> <br>
+                <p id="para1">From our past, we've learned perfection. This is how the first model of the Lamborghini Huracán was born. More performance, more control, more innovation. The Huracán is equipped with a powerful V10 engine and the latest technologies to perform at its absolute best. Engineered to guarantee the best performance and control under any driving condition, it's easy to take to the limit, not to mention extremely fun, thanks to technology like the Lamborghini Doppia Frizione (LDF) dual clutch gearbox and the electronically-controlled four-wheel drive. Enjoy the best driving experience, ever. Discover all the Lamborghini Huracán models.</p>
+                <div id="sec3-down-text">
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">huracan sterrato</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">huracan tecnica</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">huracan sto</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">huracan evo spyder</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 4 -->
+    <div id="section4">
+        <div id="sec4-left-text">
+            <h1 id="heading1">urus</h1>
+            <div id="text-line">
+                <div id="underline1"></div>
+                <div id="underline2"></div>
+                <div id="underline3"></div>
+            </div>
+            <p id="para1">Lamborghini Urus is the world’s first Super Sport Utility Vehicle, in which luxury, sportiness and performance meet comfort and versatility. It offers best-in-class driving dynamics, alongside its unmistakable elegance of design. Urus embodies the characteristics of multiple souls: sporty, elegant and off-road, and has a suitability for everyday driving in a range of environments. With its surprisingly distinct engine sound, combined with high performance, Lamborghini Urus is anything but typical.</p>
+            <div id="sec3-down-text">
+                <div class="hover-sec1">
+                    <h3 id="sub-heading">urus s</h3> <br>
+                    <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                </div>
+                <div class="hover-sec1">
+                    <h3 id="sub-heading">urus performante</h3> <br>
+                    <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="right-car-polygon"></div>
+
+        <!-- section 5 -->
+        <div id="section5">
+            <div id="sec5-top-left-text">
+                <h1 id="limited-series-text">limitted series</h1>
+                <p id="para1">The Limited Series Lamborghini are the most exclusive, limited editions to meet a small and select number of clients. Truly representing the state of the art in the domain of super cars, the Limited Series models express the highest Lamborghini spirit in every respect. Indeed, they are equipped with the most advanced features available in the fields of design and technology.</p>
+                <div id="sec3-down-text">
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">countach lpi 800-4</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">sian fkp37</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">sian roadster</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="sec5-polygon-img1"></div>
+            <div id="sec5-polygon-img2"></div>
+            <div id="sec5-middle-text">
+                <h1 id="limited-series-text">concept</h1>
+                <p id="para1">The most visionary models, these unique specimens are set to define the highest limits of technology and design. Unveiled at the most prestigious international Motor Shows, they offer an exclusive look at the most innovative solutions that Lamborghini may adopt in its future series-production models.</p><br>
+                <div id="sec3-down-text">
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">terzo millennio</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">asterion</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                    <div class="hover-sec1">
+                        <h3 id="sub-heading">estoque</h3> <br>
+                        <div id="horizontal-line"><div id="sub-horizontal-line"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="sec5-polygon-img3"></div>
+            <div id="sec5-polygon-img4"></div>
+        </div>
+
+        <!-- section 6 -->
+        <div id="section6">
+            <div id="sec6-left-img">
+                <div class="background-img1" id="a"></div>
+                <div class="front-text"><span class="text1">automobili lamborghini</span><span class="text2">company</span></div>
+            </div>
+            <div id="sec6-right-img">
+                <div class="background-img1" id="b"></div>
+                <div class="front-text"><span class="text1">make it unique make it yours</span> <span class="text2">ad personam</span></div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div id="container">
+                <div>
+                    <ul id="ul-tags">
+                        <a href="#" id="footer-links"><li>company <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>financials <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>careers <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>contact us <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>systainability <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>media center <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>privacy & legal <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>cookie settings <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>sitemap <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>newsletters <div class="underline"></div></li></a>
+                        <a href="#" id="footer-links"><li>accessibility <div class="underline"></div></li></a>
+                    </ul>
+                </div>
+                <div>
+                    <ul  id="social-links">
+                        <a href="#"><li><i class="fa-brands fa-instagram"></i></li></a>
+                        <a href="#"><li><i class="fa-brands fa-facebook-f"></i></li></a>
+                        <a href="#"><li><i class="fa-brands fa-youtube"></i></li></a>
+                        <a href="#"><li><i class="fa-brands fa-x-twitter"></i></li></a>
+                        <a href="#"><li><i class="fa-brands fa-tiktok"></i></li></a>
+                        <a href="#"><li><i class="fa-brands fa-linkedin-in"></i></li></a>
+                        <a href="#"><li><i class="fa-brands fa-weibo"></i></li></a>
+                        <a href="#"><li><i class="fa-brands fa-weixin"></i></li></a>
+                        <a href="#"><li><i class="fa-brands fa-discord"></i></li></a>
+                    </ul>
+                </div>
+                <p id="footer-icon-para">The consumption and emissions values in the website refer to your geographical IP. This value might be unrealistic if you navigate using VPN or if the position of your Internet provider is imprecise. If you believe you are incorrectly geolocalized, contact your dealer to get valid consumption and emissions information in your area.</p>
+                <p>Copyright © 2024 Automobili Lamborghini S.p.A. a sole shareholder company part of Audi Group. <br><br>
+
+                    All rights reserved. VAT no. IT 00591801204 <br><br>
+                    
+                    WARNING ABOUT ILLEGAL OFFERS OF ALLEGED SHARES OF AUTOMOBILI LAMBORGHINI S.P.A. <br><br>
+                    
+                    Automobili Lamborghini S.p.A. got the notice that several third parties across different countries are allegedly offering shares in Automobili Lamborghini S.p.A. These offers are unlawful and originate neither from Volkswagen Aktiengesellschaft nor from any of its subsidiaries.
+                    
+                    </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

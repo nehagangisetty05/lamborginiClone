@@ -1,0 +1,1046 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+/* ----- Navigation bar -----*/
+nav{
+    width: 100%;
+    height: 94px;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+}
+
+#logo{
+    width: 9vw;
+    height: 90px;
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 4vw;
+}
+
+#left-list, #right-list{
+    display: flex;
+    width: 30vw;
+    margin-left: 30px;
+    justify-content: space-evenly;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#right-list li a,
+#left-list li a{
+    color: white;
+}
+
+#menu-a-tag{
+    text-decoration: none;
+}
+
+.underline{
+    width: 0;
+    height: 1.5px;
+    background-color: white;
+}
+
+li:hover .underline{
+    animation: slide-underline 0.5s linear both;
+}
+
+@keyframes slide-underline {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+#right-list{
+    width: 20vw;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 25vw;
+}
+
+#right-symbol{
+    width: 20vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly ;
+    align-items: center;
+    font-size: 25px;
+    
+}
+
+i{
+    color: white;
+    cursor: pointer;
+}
+
+#three-lines{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.horizontal-bars{
+    width: 60%;
+    height: 2px;
+    background-color: white;
+}
+
+#three-lines:hover #bar1{
+    animation: crossAnimation1 0.5s linear both;
+}
+
+#three-lines:hover #bar2{
+    animation: crossAnimation2 0.5s linear both;   
+}
+
+#three-lines:hover #bar3{
+    animation: crossAnimation3 0.5s linear both;
+}
+
+@keyframes crossAnimation1 {
+    from{
+        transform: translateY(0px) rotate(45deg);
+    }
+    to{
+        transform:  translateY(9px) rotate(45deg);
+    }
+}
+
+@keyframes crossAnimation2 {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
+
+@keyframes crossAnimation3 {
+    from{
+        transform: translateY(0px) rotate(0deg);
+    }
+    to{
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+/* dropdown */
+
+.sublist {
+    display: none; 
+    position: absolute; 
+    background-color: #181818; 
+    padding: 10px; 
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    animation: slideDown 0.3s ease forwards;
+}
+
+#right-symbol li:hover .sublist, 
+#left-list li:hover .sublist,
+.sublist:hover {
+    display: block;
+}
+
+@keyframes slideDown {
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.sublist li{
+    list-style: none;
+    padding: 10px;
+    padding-left: 165px;
+    color: gray;
+}
+
+.sublist2 li{
+    padding-left: 325px;
+}
+
+.sublist3 li{
+    padding-left: 435px;
+}
+
+.sublist li a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    font-size: 14px;
+    color: gray;
+}
+
+/* message section */
+.msg{
+    width: 30vw;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.msg .head{
+    width: 85%;
+    padding: 30px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.msg .head > *{
+    color: black;
+    font-weight: bold;
+}
+
+.msg .line{
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    margin-top: 20px;
+}
+
+.msg .scroll{
+    width: 99%;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.msg .scroll::-webkit-scrollbar{
+    width: 10px;
+}
+
+.msg .scroll > *{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.msg .scroll p{
+    font-size: 1.2rem;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+.msg .scroll .boxs{
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.msg .scroll .boxs .box{
+    width: 80%;
+    padding: 20px;
+    border: 0.5px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.msg .scroll .boxs .box:hover{
+    border: 1.5px solid black;
+}
+
+.msg .msgbox{
+    width: 89%;
+    padding: 20px;
+}
+
+.msg .msgbox input{
+    width: 80%;
+    padding: 20px;
+    border: 1px solid gray;
+    background-color: transparent;
+}
+
+.msg .msgbox input:hover{
+    border: 2px solid aqua;
+}
+
+.msg .msgbox button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+@keyframes msgbox {
+    from{
+        right: -500px;
+    }
+    to{
+        right: 0;
+    }
+}
+
+@keyframes msgboxout {
+    from{
+        right: 0px;
+    }
+    to{
+        right: -500px;
+    }
+}
+
+/* search section */
+.searchContainer{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.922);
+    top: 0;
+    z-index: 12;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.searchContainer .crossbar{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchContainer .crossbar > *{
+    color: white;
+    font-size: 30px;
+}
+
+.searchContainer .crossbar i{
+    transition: all 0.5s ease;
+}
+
+.searchContainer .crossbar i:hover{
+    background-color: gray;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.searchContainer .searchtitle{
+    width: 90%;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.searchContainer .searchtitle > *{
+    margin-bottom: 20px;
+}
+
+.searchContainer .searchtitle h2{
+    font-size: 2rem;
+}
+
+.searchContainer .searchtitle h1{
+    font-size: 5rem;
+}
+
+.searchContainer .searchinput{
+    width: 90%;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.searchContainer .searchinput input{
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.508);
+    background: transparent;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+.searchContainer .searchinput button{
+    padding: 5px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+@keyframes searchanime {
+    from{
+        /* transform: translateY(-500px); */
+        top: -500px;
+    }
+    to{
+        /* transform: translateY(0); */
+        top: 0;
+    }
+}
+
+/* 3linescross */
+
+.mainsubmenu{
+    display: none; 
+    flex-direction: column;
+    position: absolute; 
+    background-color: #181818; 
+    padding: 10px; 
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    animation: slideDown 0.3s ease forwards;
+}
+
+.mainsubmenu .lower,
+.mainsubmenu .upper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.mainsubmenu .lower{
+    margin-bottom: 20px;
+}
+
+.mainsubmenu .upper div ul li{
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.mainsubmenu .lower div{
+    width: 20vw;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.mainsubmenu .lower div p{
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.mainsubmenu .lower div h5{
+    color: gray;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.mainsubmenu .lower div .contetnicons{
+    color: white;
+    display: flex;
+}
+
+.mainsubmenu .menuline{
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+#right-symbol li:hover .mainsubmenu,
+.mainsubmenu:hover{
+    display: flex;
+} 
+
+
+/* ----- Header Page Section ----- */
+
+#car-wallpaper{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: pink;
+    background-image: url(./asset/revuelto-exterior-left-rear-three-quarter.webp);
+    background-size: cover;
+}
+
+#side-menu{
+    width: 12vw;
+    height: 28px;
+    background-color: #181818;
+    position: absolute;
+    top: 10vw ;
+    clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 40px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#models{
+    font-weight: bold;
+}
+
+#heading{
+    width: 450px;
+    height: 200px;
+    /* background-color: pink; */
+    color: white;
+    position: absolute;
+    top: 23vw;
+    left: 9vw;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+#line1{
+    font-size: 30px;
+    opacity: 100%;
+    animation: line1-anime 1s linear;
+}
+
+#line2{
+    font-size: 100px;
+    animation: line2-anime 1s linear both;
+}
+
+@keyframes line1-anime {
+    from{
+        filter: opacity(0%);
+    }
+    to{
+        filter: opacity(100%);
+    }
+}
+
+@keyframes line2-anime {
+    from{
+        transform: translate(-600px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+
+#overview{
+    width: 30vw;
+    height: 6vw;
+    position: absolute;
+    bottom: 0px;
+    right: 10vw;
+    display: flex;
+}
+
+#down-symbol{
+    width: 7vw;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#hexagon1, #hexagon2{
+    width: 5vw;
+    height: 5vw;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transform: rotate(180deg);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hexagon2{
+    width: 4.5vw;
+    height: 4.5vw;
+    background-color: #181818;
+    color: white;
+    
+}
+
+#arrow{
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    transform: rotate(90deg);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 66% 100%, 89% 51%, 65% 0);
+    position: absolute;
+    bottom: 25px;
+}
+
+#overview-text{
+    width: 23vw;
+    height: 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding-left: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#overview-text-1{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#overview-text-2{
+    font-size: 1.5vw;
+}
+
+/* Section2 */
+
+#section2{
+    width: 100%;
+    height: 130vh;
+    position: absolute;
+    top: 100vh;
+}
+
+#sec2-left-text{
+    width: 35vw;
+    height: 30vw;
+    position: absolute;
+    top: 30vw;
+    left: 13vw;
+}
+
+#heading1{
+    font-size: 3vw;
+    font-style: oblique;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#text-line{
+    width: 35vw;
+    height: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#underline1, #underline2, #underline3{
+    width: 18%;
+    height: 5px;
+    background-color: green;
+    clip-path: polygon(0 0, 100% 0%, 88% 100%, 12% 100%);
+}
+
+#underline2{
+    background-color: gray;
+    clip-path: polygon(12% 0, 88% 0, 100% 99%, 0 100%);
+}
+
+#underline3{
+    background-color: red;
+}
+
+#para1{
+    padding-top: 20px;
+    line-height: 30px;
+}
+
+#down-text{
+    width: 100%;
+    height: 100px;
+}
+
+#sub-heading{
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+#horizontal-line{
+    width: 70%;
+    height: 2px;
+    background-color: gray;
+    filter: opacity(50%);
+}
+
+#sub-horizontal-line{
+    width: 0%;
+    height: 2px;
+    background-color: black;
+}
+
+@keyframes moveline {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+#down-text:hover #sub-horizontal-line{
+    animation: moveline 1s linear both;
+    cursor: pointer;
+}
+
+#polygon-images-right{
+    width: 60%;
+    height: 130vh;
+    position: absolute;
+    right: 0px;
+}
+
+#polygon-img1{
+    width: 30vw;
+    height: 35vw;
+    position: absolute;
+    right: 0px;
+    clip-path: polygon(67% 0, 100% 0, 100% 100%, 0% 100%);
+    background-image: url(./asset/corpo1_m.webp);
+    background-size: cover;
+}
+
+#polygon-img2{
+    width: 60vw;
+    height: 28.5vw;
+    background-color: blue;
+    position: absolute;
+    right: 0px;
+    top: 37vw;
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 81% 100%, 25% 100%, 0 100%);
+    background-image: url(./asset/front-left-side-47.webp);
+    background-size: cover;
+}
+
+/* section 3 */
+
+#section3{
+    width: 100%;
+    height: 120vh;
+    position: absolute;
+    top: 240vh;
+}
+
+#sec3-left-polygon1{
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    clip-path: polygon(23% 0, 100% 0, 63% 100%, 56% 100%, 0 100%, 0 51%);
+    z-index: 3;
+    top: 20px;
+    background-image: url(./asset/lamborghini-huracan-sterrato-ogi.webp);
+    background-size: cover;
+}
+
+#sec3-left-polygon2{
+    width: 38%;
+    height: 45%;
+    position: absolute;
+    bottom: 0px;
+    clip-path: polygon(23% 0, 100% 0, 63% 100%, 56% 100%, 0 100%, 0 0);
+    background-image: url(./asset/car1.jpg);
+    background-size: cover;
+}
+
+#sec3-right-text{
+    width: 50%;
+    height: 120vh;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sec3-para{
+    width: 70%;
+    height: 60%;
+}
+
+#sec3-down-text{
+    width: 100%;
+    height: 290px;
+}
+
+.hover-sec1:hover #sub-horizontal-line{
+    animation: moveline 1s linear both;
+    cursor: pointer;   
+}
+
+/* section 4 */
+
+#section4{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    /* background-color: palevioletred; */
+    top: 350vh;
+}
+
+#sec4-left-text{
+    width: 35%;
+    height: 80vh;
+    position: absolute;
+    bottom: 0px;
+    /* background-color: plum; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 50px;
+}
+
+#right-car-polygon{
+    width: 70%;
+    height: 80vh;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    /* background-color: peru; */
+    clip-path: polygon(41% 0, 100% 0, 100% 100%, 56% 100%, 0 100%, 0 100%);
+    background-image: url(./asset/car2.jpeg);
+    background-size: cover;
+}
+
+/* section 5 */
+
+#section5{
+    width: 100%;
+    height: 230vh;
+    /* background-color: peachpuff; */
+    position: absolute;
+    top: 110vh;
+}
+
+#sec5-top-left-text{
+    width: 33vw;
+    height: 30%;
+    /* background-color: palegreen; */
+    margin-left: 7vw;
+}
+
+#limited-series-text{
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+#sec5-polygon-img1{
+    width: 63vw;
+    height: 30vw;
+    /* background-color: palevioletred; */
+    position: absolute;
+    right: 0px;
+    top: 15vw;
+    clip-path: polygon(100% 0, 100% 18%, 85% 100%, 0 100%, 28% 0);
+    background-image: url(./asset/polygon1.jpeg);
+    background-size: cover;
+}
+
+#sec5-polygon-img2{
+    width: 40vw;
+    height: 25vw;
+    /* background-color: palevioletred; */
+    position: absolute;
+    top: 35vw;
+    clip-path: polygon(100% 0, 65% 100%, 0 100%, 0 42%, 17% 0);
+    background-image: url(./asset/polygon2.jpeg);
+    background-size: cover;
+}
+
+#sec5-middle-text{
+    width: 33vw;
+    height: 26vw;
+    /* background-color: palevioletred; */
+    position: absolute;
+    left: 35vw;
+    top: 55vw;
+}
+
+#sec5-polygon-img3{
+    width: 60vw;
+    height: 30vw;
+    /* background-color: aqua; */
+    position: absolute;
+    bottom: 0px;
+    clip-path: polygon(100% 0, 65% 100%, 0 100%, 0 42%, 0 0);
+    background-image: url(./asset/polygon3.jpeg);
+    background-size: cover;
+}
+
+#sec5-polygon-img4{
+    width: 55vw;
+    height: 30vw;
+    /* background-color: aqua; */
+    position: absolute;
+    bottom: 4vw;
+    right: 0px;
+    clip-path: polygon(100% 0, 100% 45%, 81% 100%, 0 100%, 38% 0);
+    background-image: url(./asset/polygon4.jpeg);
+    background-size: cover;
+}
+
+/* section 6 */
+
+#section6{
+    width: 100%;
+    height: 60vh;
+    background-color: aqua;
+    position: absolute;
+    top: 340vh;
+    overflow: hidden;
+}
+
+#sec6-left-img, #sec6-right-img{
+    width: 50%;
+    height: 60vh;
+    position: absolute;
+    background-color: plum;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.background-img1{
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+#a{
+    background-image: url(./asset/image1.webp);
+    filter: brightness(50%);
+}
+
+#sec6-left-img:hover #a{
+    transform: scale(1.2);
+}
+
+.front-text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5vw;
+    color: white;
+    text-transform: uppercase;
+}
+
+.text1{
+    font-size: 1.5vw;
+}
+
+.text2{
+    font-size: 5vw;
+}
+
+#sec6-right-img{
+    background-color: palegreen;
+    right: 0px;
+}
+
+#b{
+    background-image: url(./asset/image2.webp);
+    filter: brightness(50%);
+}
+
+#sec6-right-img:hover #b{
+    transform: scale(1.2);
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    height: 30vw;
+    background-color: #181818;
+    position: absolute;
+    top: 202vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 90%;
+    height: 25vw;
+    /* background-color: pink; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+
+#ul-tags{
+    width: 60vw;
+    height: 8vw;
+    /* background-color: palegreen; */
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    text-align: left;
+    column-gap: 2vw;
+}
+
+#footer-links{
+    text-decoration: none;
+    color: white;
+}
+
+#social-links{
+    width: 20vw;
+    height: 4vw;
+    /* background-color: peru; */
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#footer-icon-para::before
+{
+    content: url(./asset/star-solid.svg);
+}
